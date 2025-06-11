@@ -18,7 +18,7 @@ const options = {
 };
 
 const fp = flatpickr('#datetime-picker', options);
-const startBtn = document.querySelector('#start-button');
+const startBtn = document.querySelector('[data-start]');
 startBtn.setAttribute('disabled', true);
 startBtn.addEventListener('click', () => startTimer(selectedDate));
 

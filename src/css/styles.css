@@ -43,7 +43,7 @@
   transform: translateY(-2px);
 }
 
-#start-button {
+[data-start] {
   display: inline-flex;
   padding: 8px 16px;
   justify-content: center;
@@ -61,7 +61,7 @@
   border: none;
 }
 
-#start-button:hover {
+[data-start]:hover {
   border-radius: 8px;
   background: #6c8cff;
   color: #fff;
@@ -73,7 +73,7 @@
   letter-spacing: 0.64px;
 }
 
-#start-button:disabled {
+[data-start]:disabled {
   border-radius: 8px;
   background: #cfcfcf;
   color: #989898;
