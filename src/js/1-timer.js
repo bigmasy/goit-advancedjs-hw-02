@@ -19,6 +19,7 @@ const options = {
 
 const fp = flatpickr('#datetime-picker', options);
 const startBtn = document.querySelector('[data-start]');
+const dateInput = document.querySelector('#datetime-picker');
 startBtn.setAttribute('disabled', true);
 startBtn.addEventListener('click', () => startTimer(selectedDate));
 
@@ -40,12 +41,14 @@ let intervalId;
 function startTimer(endDate) {
   intervalId = setInterval(() => {
     startBtn.setAttribute('disabled', true);
+    dateInput.setAttribute('disabled', true);
     const now = Date.now();
     const delta = endDate - now;
 
     if (delta <= 0) {
       clearInterval(intervalId);
       updateTimerDisplay({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      dateInput.removeAttribute('disabled');
 
       return;
     }
